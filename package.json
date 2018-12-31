@@ -1,0 +1,38 @@
+{
+  "name": "eComm",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/react-native-tab-view": "^1.0.2",
+    "axios": "^0.18.0",
+    "lodash": "^4.17.11",
+    "react": "16.6.1",
+    "react-native": "0.57.7",
+    "react-native-datepicker": "^1.7.2",
+    "react-native-dropdown": "0.0.6",
+    "react-native-dropdown-menu": "^2.0.0",
+    "react-native-fa-icons": "^4.1.0",
+    "react-native-image-picker": "^0.27.2",
+    "react-native-keyboard-aware-scroll-view": "^0.7.4",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-nav-tabbar": "0.0.2",
+    "react-native-router-flux": "^4.0.6",
+    "react-navigation": "^2.18.3",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.50.0",
+    "react-test-renderer": "16.6.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
