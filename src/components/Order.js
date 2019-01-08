@@ -129,6 +129,7 @@ class Order extends Component {
                     ToastAndroid.show('Failed add to Shoping Bag', ToastAndroid.SHORT)
                 })
         } else {
+            ToastAndroid.show('Please sign in first', ToastAndroid.SHORT)
             this.props.navigation.navigate('Authorization')
         }
     }
