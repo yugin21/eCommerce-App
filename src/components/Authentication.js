@@ -38,12 +38,10 @@ export default class Authentication extends Component {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
                     ToastAndroid.show('Sign Up Success', ToastAndroid.SHORT)
                     this.props.navigation.navigate('Authorization')
                 })
                 .catch(err => {
-                    console.log(err)
                     ToastAndroid.show('Email or Phone has registered', ToastAndroid.SHORT)
                     this.setState({ email: '', phone: '' })
                 })
