@@ -14,6 +14,11 @@ export default class Authorization extends Component {
 
     signinData = ({ email, phone, password }) => {
         const url = authorizationURL
+        let bodyJSON = JSON.stringify({
+                email: email,
+                phone: phone,
+                password: password
+            })
         this.setState({ loading: true })
         return fetch(url, {
             method: 'POST',
@@ -21,16 +26,11 @@ export default class Authorization extends Component {
                 Accept: 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                email: email,
-                phone: phone,
-                password: password
-            })
+            body: bodyJSON
         })
             .then(res => res.json())
             .then(data => {
                 if (data.token) {
-                    console.log(data)
                     ToastAndroid.show('Login Success', ToastAndroid.SHORT)
                     this.setState({ loading: false })
                     AsyncStorage.setItem('token', data.token)
@@ -40,13 +40,11 @@ export default class Authorization extends Component {
                     this.props.navigation.navigate('MainHome')
                     this.setState({ email: '', password: '' })
                 } else {
-                    console.log(data)
                     ToastAndroid.show('Invalid Email or Password', ToastAndroid.SHORT)
                     this.setState({ loading: false, password: '' })
                 }
             })
             .catch(err => {
-                console.log(err)
                 ToastAndroid.show('Login Failed', ToastAndroid.SHORT)
                 this.setState({ loading: false })
             })
