@@ -1,3 +1,3 @@
-# Hanya Sebuah Tambahan Readme.md
+# Simple e-Commerce App using React Native Library
 
 ### Agar kelihatan banyak
