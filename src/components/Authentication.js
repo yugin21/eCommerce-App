@@ -22,18 +22,19 @@ export default class Authentication extends Component {
             ToastAndroid.show('Field is required', ToastAndroid.SHORT)
         } else {
             const url = authenticationURL
+            let bodyJSON = JSON.stringify({
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    password: password
+                })
             return fetch(url, {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    phone: phone,
-                    password: password
-                })
+                body: bodyJSON
             })
                 .then(res => res.json())
                 .then(data => {
