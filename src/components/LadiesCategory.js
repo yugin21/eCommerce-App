@@ -3,7 +3,7 @@ import { View, Text, FlatList, Image, StyleSheet, TouchableOpacity } from 'react
 import Loading from './Loading';
 import { ladiesCategoryURL } from '../../utils/Endpoints';
 
-class LadiesCategory extends Component {
+export default class LadiesCategory extends Component {
     constructor() {
         super()
         this.state = {
@@ -128,5 +128,3 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     }
 })
-
-export default LadiesCategory;
