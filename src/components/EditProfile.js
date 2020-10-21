@@ -19,7 +19,6 @@ export default class EditProfile extends Component {
 
     updateProfile() {
         const token = this.state.token
-        console.log(token)
         const { name, email, phone } = this.state
         axios.put(`http://e-commerce-rest-api.herokuapp.com/profile`, {
             name: name,
@@ -53,7 +52,6 @@ export default class EditProfile extends Component {
     requestDataProfile() {
         const url = profileURL
         const token = this.state.token
-        console.log(token)
         fetch(url, {
             method: 'GET',
             headers: {
@@ -136,7 +134,6 @@ export default class EditProfile extends Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             this.renderItem()
         )
