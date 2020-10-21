@@ -4,7 +4,7 @@ import Loading from './Loading';
 import { ladiesProductsURL } from '../../utils/Endpoints';
 import _ from 'lodash';
 
-class LadiesProducts extends Component {
+export default class LadiesProducts extends Component {
     constructor() {
         super()
         this.state = {
@@ -172,5 +172,3 @@ const styles = StyleSheet.create({
         color: '#fff'
     }
 })
-
-export default LadiesProducts;
